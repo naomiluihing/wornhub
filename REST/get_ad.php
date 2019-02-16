@@ -17,5 +17,5 @@
 		exit;
 	}
 	
-	var_dump($q1);
+	echo "{'".$q1["aid"]."':{'userid':'".$q1["oid"]."','title':'...'}}";
 ?>
