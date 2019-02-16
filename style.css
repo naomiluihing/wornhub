@@ -1,5 +1,7 @@
 li.nav-item:hover {
   border: 2pt solid orange;
+  background-color: orange;
+  border-radius: 15px 15px 15px 15px;
 }
 li.nav-item {
   border: 2pt solid rgba(0,0,0,0);
