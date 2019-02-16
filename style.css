@@ -9,6 +9,9 @@ li.nav-item {
 input.searchBar {
 	margin-left: 24pt;
 }
+h2.BrowseByCategoryHeadline {
+	text-align: center;
+}
 
 /* Add a black background color to the top navigation bar */
 .topnav {
