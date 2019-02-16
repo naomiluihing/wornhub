@@ -17,5 +17,5 @@
 		exit;
 	}
 	
-	echo "{'".$q1["aid"]."':{'userid':'".$q1["oid"]."','title':'...'}}";
+    echo "{'".$q1["aid"]."':{'userid':'".$q1["oid"]."','title':".$q1["title"].",'price':".$q1["price"].",'type':".$q1["type"].",'size':".$q1["size"].",'brand':".$q1["brand"].",'colour':".$q1["colour"].", 'condition':".$q1["condition"].",'status':".$q1["status"].",'description':".$q1["description"]."}}";
 ?>
