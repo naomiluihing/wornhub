@@ -12,7 +12,15 @@ input.searchBar {
 h2.BrowseByCategoryHeadline {
 	text-align: center;
 }
-
+h3.DescriptionHeadline {
+	text-align: center;
+}
+h2.AboutHeader {
+	text-align: center;
+}
+h3.DescriptionHeader {
+	text-align: center;
+}
 /* Add a black background color to the top navigation bar */
 .topnav {
   overflow: hidden;
