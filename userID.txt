@@ -2,8 +2,6 @@
 	"userID":"",
 	"name":"";
 	"email":"",
-	"phoneNumber":"",
-	"password":"";
-	"postal":"";
+	"phoneNumber":"",	"postal":"";
 
 }
