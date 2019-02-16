@@ -1,0 +1,8 @@
+(AD_ID):{
+	"adID":"",
+	"ownerID":"",
+	"Title":"",
+	"colour":"",
+	"type":"",
+	"description":"",
+}
