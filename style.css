@@ -5,6 +5,10 @@ li.nav-item:hover {
 }
 li.nav-item {
   border: 2pt solid rgba(0,0,0,0);
+  color:black;
+}
+a.nav-link {
+  color:black;
 }
 input.searchBar {
 	margin-left: 24pt;
