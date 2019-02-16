@@ -2,7 +2,13 @@
 	"adID":"",
 	"ownerID":"",
 	"Title":"",
+	"price":"",
+	"size":"";
+	"brand":"";
 	"colour":"",
 	"type":"",
 	"description":"",
+	"condition":"",
+	"status":""
+
 }
