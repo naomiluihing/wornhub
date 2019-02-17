@@ -1,7 +1,0 @@
-(user_ID):{
-	"userID":"",
-	"name":"";
-	"email":"",
-	"phoneNumber":"",	"postal":"";
-
-}
