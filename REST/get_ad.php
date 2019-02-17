@@ -17,6 +17,7 @@
 		exit;
 	}
 	
+<<<<<<< HEAD
 	$colours = ["Black", "White", "Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Gray", "Brown", "Other", "Mixed"];
 	$statuses = ["For Sale", "On Hold", "Sold"];
 	
@@ -30,3 +31,7 @@
 	'size':'".$q1["size"]."'
 	'price':'".$q1["price"]."'}}";
 ?>
+=======
+    echo 
+?>
+>>>>>>> de1a74039a386ebba0b83709ccaa015541c5b232
