@@ -27,7 +27,7 @@
 	
 	function query($conn, $query){
 		$r = $conn->query($query);
-		if($r->num_rows > 0){
+		if($r!=false && $r->num_rows > 0){
 			return $r->fetch_assoc();
 		}else{
 			return false;
