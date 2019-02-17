@@ -19,6 +19,7 @@
   <link href="./style.CSS" rel="stylesheet">
   <script>
 </script>
+	<script src="./get.js"></script>
 </head>
 <body data-spy="scroll" data-target="#main-navbar" data-offset="58">
   <!-- NOTE: the this is used to detect bootstrap media changes in JS -->
@@ -271,47 +272,40 @@
   <!-- define title footer paine -->
   <div id="adOverview" class="contact bg-light">
     <div class="container">
-      <h2>adTitle</h2>
+      <h2 id="atitle"></h2>
+	  Posted by <b id="aowner"></b> on <i id="adate"></i><br />
+	  <i id="apostal">K2G 6T6</i><br /><br />
+	  <h4 id="aprice"></h4>
       <hr>
-      <div class="imgs">
-        <div class = "col-md-12 col-lg-6">
-          <img src ="assets/ads/FMD28_Comfy_Space_PJs_Girls_1.jpg">
-        </a>
+        <div id="img" class = "col-md-12 col-lg-6">
+          <!-- <img style="max-width:100%;" src ="img/20190211_190924.jpg"> -->
       </div>
-
-  <!-- define contact footer pane -->
-  <div id="contact" class="contact bg-dark">
-    <div class="container">
-      <h2>Contact</h2>
-      <hr>
-      <div class="row">
-        <div class="col-md-12 col-lg-6">
-          <a href="mailto:Wornhub@email.com">
-            <img src="assets/contact/at.svg">
-            <span>Wornhub@email.com</span>
-          </a>
-        </div>
-        <div class="col-md-12 col-lg-6">
-          <a href="https://github.com/naomiluihing/wornhub">
-            <img src="assets/contact/github-square.svg">
-            <span>https://github.com/naomiluihing/wornhub</span>
-          </a>
-        </div>
+	  <div id="ainfo" class = "col-md-12 col-lg-6">
+		
       </div>
-      <div class="row">
-        <div class="col-md-12 col-lg-6">
-          <a href="https://twitter.com/Wornhub">
-            <img src="assets/contact/twitter-square.svg">
-            <span>twitter.com/Wornhub</span>
-          </a>
-        </div>
-        <div class="col-md-12 col-lg-6">
-          <a href="https://www.linkedin.com/in/Wornhub">
-            <img src="assets/contact/linkedin-square.svg">
-            <span>linkedin.com/in/Wornhub</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+	</div>
+	
+  
+	<script>
+	
+	getJSON('./REST/get_ad.php?id=<?php echo $_GET["id"]; ?>',
+function(err, data) {
+  if (err !== null) {
+    alert('Something went wrong: ' + err);
+  } else {
+    var a = data[<?php echo $_GET["id"]; ?>];
+	document.getElementById("atitle").innerHTML = a["title"];
+	document.getElementById("aowner").innerHTML = a["owner"];
+	document.getElementById("adate").innerHTML = a["date"];
+	document.getElementById("apostal").innerHTML = a["postal"];
+	document.getElementById("aprice").innerHTML = "$"+a["price"];
+	
+	document.getElementById("ainfo").innerHTML += "Colour: <b>"+a["colour"]+"</b><br />";
+	document.getElementById("ainfo").innerHTML += "Type: <b>"+a["type"]+"</b><br />";
+	document.getElementById("ainfo").innerHTML += "Size: <b>"+a["size"]+"</b><br />";
+	
+	document.getElementById("ainfo").innerHTML += "<br />";
+  }
+});
+</script>
 </body>
