@@ -18,8 +18,8 @@
 	}
 	
 		
-	echo "{'".$q1["uid"]."':{'name':'".$q1["name"]."',
-	'email':'".$q1["email"]."',
-	'phone number':'".$q2["phone"]."',
-	'postal':'".$q2["postal"]."'}}";
+	echo "{\"".$q1["uid"]."\":{\"name\":\"".$q1["name"]."\",
+	\"email\":\"".$q1["email"]."\",
+	\"phone number\":\"".$q1["phone"]."\",
+	\"postal\":\"".$q1["postal"]."\"}}";
 ?>

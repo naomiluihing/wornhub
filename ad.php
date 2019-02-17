@@ -277,16 +277,34 @@
 	  <i id="apostal">K2G 6T6</i><br /><br />
 	  <h4 id="aprice"></h4>
       <hr>
-        <div id="img" class = "col-md-12 col-lg-6">
+        <div id="aimg" class = "col-md-12 col-lg-6">
           <!-- <img style="max-width:100%;" src ="img/20190211_190924.jpg"> -->
-      </div>
+      </div><br />
 	  <div id="ainfo" class = "col-md-12 col-lg-6">
 		
+      </div>
+	  <div class = "col-md-12 col-lg-6">
+		<button onclick="showContactInfo();" id="acontact">Get Contact</button><br /><br />
+		<span id="uinfo"></span>
       </div>
 	</div>
 	
   
 	<script>
+	
+	var uid;
+	
+	function showContactInfo(){
+		getJSON('./REST/get_user.php?id='+uid,
+function(err, data) {
+  if (err !== null) {
+    alert('Something went wrong: ' + err);
+  } else {
+    var a = data[uid];
+	document.getElementById("uinfo").innerHTML = a["phone number"]+"<br />"+a["email"]+"<br /><br />";
+  }
+});
+	}
 	
 	getJSON('./REST/get_ad.php?id=<?php echo $_GET["id"]; ?>',
 function(err, data) {
@@ -300,11 +318,22 @@ function(err, data) {
 	document.getElementById("apostal").innerHTML = a["postal"];
 	document.getElementById("aprice").innerHTML = "$"+a["price"];
 	
+	uid = a["oid"];
+	
 	document.getElementById("ainfo").innerHTML += "Colour: <b>"+a["colour"]+"</b><br />";
 	document.getElementById("ainfo").innerHTML += "Type: <b>"+a["type"]+"</b><br />";
 	document.getElementById("ainfo").innerHTML += "Size: <b>"+a["size"]+"</b><br />";
 	
 	document.getElementById("ainfo").innerHTML += "<br />";
+  }
+});
+	getJSON('./REST/get_picture.php?id=<?php echo $_GET["id"]; ?>',
+function(err, data) {
+  if (err !== null) {
+    alert('Something went wrong: ' + err);
+  } else {
+    var a = data[<?php echo $_GET["id"]; ?>];
+	document.getElementById("aimg").innerHTML = "<img style=\"max-width:100%;\" src =\"img/"+a["location"]+"\">";
   }
 });
 </script>
