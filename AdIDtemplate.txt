@@ -1,0 +1,14 @@
+(AD_ID):{
+	"adID":"",
+	"ownerID":"",
+	"Title":"",
+	"price":"",
+	"size":"";
+	"brand":"";
+	"colour":"",
+	"type":"",
+	"description":"",
+	"condition":"",
+	"status":""
+
+}
